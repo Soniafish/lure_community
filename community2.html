@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Community2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+
+    <div class="community">
+        <h2>LURE Community</h2>
+        <nav>
+            <a href="javascript: void(0);" data-label="all">VIEW ALL</a>
+            <a href="javascript: void(0);" data-label="outfit">#OUTFIT</a>
+            <a href="javascript: void(0);" data-label="makeup">#MAKEUP</a>
+            <a href="javascript: void(0);" data-label="travel">#TRAVEL</a>
+            <a href="javascript: void(0);" data-label="life">#LIFE</a>
+        </nav>
+        
+        <div class="community_list"></div>
+    </div>
+
+    <script>
+            var list = [{
+                path: "images/community-1.jpg",
+                tag: ["outfit", "life"],
+            }, {
+                path: "images/community-2.jpg",
+                tag: ["makeup"],
+            }, {
+                path: "images/community-3.jpg",
+                tag: ["travel"],
+            }, {
+                path: "images/community-4.jpg",
+                tag: ["life"],
+            }, {
+                path: "images/community-5.jpg",
+                tag: ["travel", "outfit"],
+            }, {
+                path: "images/community-6.jpg",
+                tag: ["makeup", "life"],
+            }, {
+                path: "images/community-7.jpg",
+                tag: ["outfit"],
+            }, {
+                path: "images/community-8.jpg",
+                tag: ["travel", "life"],
+            }, {
+                path: "images/community-9.jpg",
+                tag: ["travel"],
+            }, {
+                path: "images/community-10.jpg",
+                tag: ["outfit", "makeup"],
+            }, {
+                path: "images/community-11.jpg",
+                tag: ["life", "makeup"],
+            }, {
+                path: "images/community-12.jpg",
+                tag: ["travel", "outfit"],
+            }, {
+                path: "images/community-13.jpg",
+                tag: ["makeup", "life"],
+            }, {
+                path: "images/community-14.jpg",
+                tag: ["outfit"],
+            }, {
+                path: "images/community-15.jpg",
+                tag: ["life", "makeup"],
+            }, {
+                path: "images/community-16.jpg",
+                tag: ["makeup", "outfit", "life"],
+            }, {
+                path: "images/community-17.jpg",
+                tag: ["life"],
+            }, {
+                path: "images/community-18.jpg",
+                tag: ["life", "makeup"],
+            }, {
+                path: "images/community-19.jpg",
+                tag: ["life", "travel"],
+            }, {
+                path: "images/community-20.jpg",
+                tag: ["travel", "outfit"],
+            }, {
+                path: "images/community-21.jpg",
+                tag: ["outfit", "makeup", "life"],
+            },];
+
+            var submenuList = {
+                "ImgUrl": "",
+                "CommunityProductList": [
+                    {
+                        "ProductID": "R182010",
+                        "SaleID": "20180828000004",
+                        "ProductTitle": "腰部抽鬚牛仔老爺褲",
+                        "SalePrice": 1190,
+                        "OriginalPrice": 1190,
+                        "ProductPhoto": {
+                            "URL": "images/community-001.jpg",
+                            "Width": 562,
+                            "Height": 683,
+                            "PhotoType": "1"
+                        },
+                        "ColorID": "A63",
+                        "ColorName": "淺藍",
+                        "MaxQuantity": 122,
+                        "ColorList": [
+                            {
+                                "ColorID": "A63",
+                                "ColorTitle": "A63",
+                                "ColorImage": {
+                                    "URL": "images/color1.png",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            },
+                            {
+                                "ColorID": "A66",
+                                "ColorTitle": "A66",
+                                "ColorImage": {
+                                    "URL": "images/color2.jpg",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            }
+                        ]
+                    },
+                    {
+                        "ProductID": "R182010",
+                        "SaleID": "20180828000004",
+                        "ProductTitle": "腰部抽鬚牛仔老爺褲",
+                        "SalePrice": 1090,
+                        "OriginalPrice": 1390,
+                        "ProductPhoto": {
+                            "URL": "images/community-002.jpg",
+                            "Width": 562,
+                            "Height": 683,
+                            "PhotoType": "1"
+                        },
+                        "ColorID": "A66",
+                        "ColorName": "深藍",
+                        "MaxQuantity": 63,
+                        "ColorList": [
+                            {
+                                "ColorID": "A63",
+                                "ColorTitle": "A63",
+                                "ColorImage": {
+                                    "URL": "images/color1.jpg",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            },
+                            {
+                                "ColorID": "A66",
+                                "ColorTitle": "A66",
+                                "ColorImage": {
+                                    "URL": "images/color2.jpg",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            }
+                        ]
+                    },
+                    {
+                        "ProductID": "R182011",
+                        "SaleID": "20180828000004",
+                        "ProductTitle": "腰部抽鬚牛仔老爺褲",
+                        "SalePrice": 1100,
+                        "OriginalPrice": 1200,
+                        "ProductPhoto": {
+                            "URL": "images/community-003.jpg",
+                            "Width": 562,
+                            "Height": 683,
+                            "PhotoType": "1"
+                        },
+                        "ColorID": "A66",
+                        "ColorName": "深藍",
+                        "MaxQuantity": 0,
+                        "ColorList": [
+                            {
+                                "ColorID": "A63",
+                                "ColorTitle": "A63",
+                                "ColorImage": {
+                                    "URL": "images/color1.png",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            },
+                            {
+                                "ColorID": "A66",
+                                "ColorTitle": "A66",
+                                "ColorImage": {
+                                    "URL": "images/color1.jpg",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            }
+                        ]
+                    },
+                    {
+                        "ProductID": "R181033",
+                        "SaleID": "20180411000011",
+                        "ProductTitle": "顯瘦褲管抽鬚牛仔褲",
+                        "SalePrice": 1190,
+                        "OriginalPrice": 1190,
+                        "ProductPhoto": {
+                            "URL": "images/community-004.jpg",
+                            "Width": 562,
+                            "Height": 683,
+                            "PhotoType": "1"
+                        },
+                        "ColorID": "A29",
+                        "ColorName": "牛仔藍",
+                        "MaxQuantity": 34,
+                        "ColorList": [
+                            {
+                                "ColorID": "A29",
+                                "ColorTitle": "A29",
+                                "ColorImage": {
+                                    "URL": "images/color3.jpg",
+                                    "Width": 20,
+                                    "Height": 20,
+                                    "PhotoType": ""
+                                },
+                                "SizeList": [],
+                                "ProductPhotoList": [],
+                                "ProductPhotoEnlargeList": []
+                            }
+                        ]
+                    }
+                ],
+                "ID": "d5d6f10e-7167-44de-bde6-00fb61cf132e"
+            }
+
+        </script>
+        <script>
+            var imgsTag = '';
+            var len = 0;
+            var col = 0;
+            var row = 0;
+
+            $(function () {
+                // community2
+                list.forEach(function (data, index) {
+                    imgsTag = imgsTag + '<div class="community_imgWrap" " data-tag="' + data.tag.join(' ') + '"><img src="' + data.path + '"/></div>';
+                });
+                $('.community_list').append(imgsTag);
+                console.log("start");
+
+                $('.community nav > a').on('click', function (e) {
+                    var targetTag = $(this).data('label');
+                    console.log(targetTag);
+                    imgsTag = '';
+                    $('.community_imgWrap').remove();
+                    $(".community_submenu").remove();
+                    if (targetTag === 'all') {
+                        list.forEach(function (data, index) {
+                            imgsTag = imgsTag + '<div class="community_imgWrap" data-href="' + data.path + '" data-tag="' + data.tag.join(' ') + '"><img src="' + data.path + '"/></div>';
+                        });
+                    } else {
+                        list.forEach(function (data, index) {
+                            for (i = 0; i < data.tag.length; i++) {
+                                console.log(targetTag + ", " + index + ", " + data.tag + ", " + data.tag[i].indexOf(targetTag))
+                                if (data.tag[i].indexOf(targetTag) > -1) {
+                                    imgsTag = imgsTag + '<div class="community_imgWrap" data-href="' + data.path + '" data-tag="' + data.tag.join(' ') + '"><img src="' + data.path + '"/></div>';
+                                    break;
+                                }
+                            }
+                        });
+                    }
+                    $('.community_list').append(imgsTag);
+
+                    //set variable
+                    len = $(".community_imgWrap").length;
+                    row = Math.ceil(len / col);
+                    imgWragClick();
+                });
+
+                //set variable
+                len = $(".community_imgWrap").length;
+                if ($(window).width() >= 1008) {
+                    console.log("desktop:" + $(window).width());
+                    col = 6;
+                } else {
+                    console.log("phone:" + $(window).width());
+                    col = 2;
+                }
+                row = Math.ceil(len / col);
+                imgWragClick();
+
+                //reset variable
+                $(window).resize(function () {
+                    if ($(window).width() >= 1008) {
+                        console.log("resize_desktop:" + $(window).width());
+                        col = 6;
+                    } else {
+                        console.log("resize_phone:" + $(window).width());
+                        col = 2;
+                    }
+                    row = Math.ceil(len / col);
+                });
+
+            });
+
+            function imgWragClick() {
+                $(".community_imgWrap").click(function () {
+                    $(".community_submenu").remove();
+                    if ($(this).hasClass("active")) {
+                        $(this).removeClass("active");
+                    } else {
+                        $(".community_imgWrap").removeClass("active");
+                        $(this).addClass("active");
+
+                        //open submenu
+                        var target_index = $(this).index() + 1;
+                        var target_row = Math.ceil(target_index / col);
+                        // var target_img = $(this).find("img").attr("src");
+                        console.log("len:" + len + ", col: " + col + ", row: " + row + ", target_index: " + target_index + ", target_row:" + target_row);
+                        var target_tag="";
+                        if (target_row == row) {
+                            //為最後一行
+                            console.log("last row");
+                            target_tag = ".community_imgWrap:nth-child(" + len + ")";
+                        } else {
+                            target_tag = ".community_imgWrap:nth-child(" + (col * target_row) + ")";
+                            console.log(target_row + ", " + target_tag);
+                        }
+                        // 更新submenuList
+                        submenuList.ImgUrl = $(this).find("img").attr("src");
+                        drawSubmenu(target_tag, target_index, submenuList);
+                    }
+                });
+            }
+
+            function drawSubmenu(tag, info_index, info_data) {
+                var html_header =
+                    '<div class="community_submenu">' +
+                    '<a href="javascript: void(0);" class="community_submenu_esc">X</a>' +
+                    '<a href="javascript: void(0);" class="community_submenu_arrowPrev"></a>' +
+                    '<div class="community_submenu_mainCnt">';
+                var html_footer =
+                    '</div>' +
+                    '<a href="javascript: void(0);" class="community_submenu_arrowNext"></a>' +
+                    '</div>';
+                var mainImg =
+                    '<div class="community_submenu_mainImg">' +
+                    '<img src=' + info_data.ImgUrl + ' alt="">' +
+                    '</div>';
+                var pdlist = '<div class="community_submenu_pdList clearfix">';
+                var pdBox = '';
+                if (info_data.CommunityProductList.length > 0) {
+                    for (var i = 0; i < info_data.CommunityProductList.length; i++) {
+                        var html_template =
+                            '<div class="community_submenu_pdBox">';
+                        var html_template_img = '';
+                        if (info_data.CommunityProductList[i].MaxQuantity == 0) {
+                            html_template_img =
+                                '<a href="https://www.lurehsu.com/zh-TW/Lure/product?SaleID=' + info_data.CommunityProductList[i].SaleID + '&ColorID=' + info_data.CommunityProductList[i].ColorID + '">' +
+                                '<img src=' + info_data.CommunityProductList[i].ProductPhoto.URL + ' alt="" class="pdBox_img">' +
+                                '<div class="sold_out_wrap"><div class="sold_out"> SOLD OUT</div></div>' +
+                                '</a>';
+                        } else {
+                            html_template_img =
+                                '<a href="https://www.lurehsu.com/zh-TW/Lure/product?SaleID=' + info_data.CommunityProductList[i].SaleID + '&ColorID=' + info_data.CommunityProductList[i].ColorID + '">' +
+                                '<img src=' + info_data.CommunityProductList[i].ProductPhoto.URL + ' alt="" class="pdBox_img">' +
+                                '</a>';
+                        }
+                        var html_template_info =
+                            '<div class="pdBox_info">' +
+                            '<p class="pdBox_code">' + info_data.CommunityProductList[i].ProductID + '</p>' +
+                            '<p class="pdBox_name">' + info_data.CommunityProductList[i].ProductTitle + '</p> ' +
+                            '<div class="pdBox_subinfo">';
+                        var html_template_price = "";
+                        if (info_data.CommunityProductList[i].OriginalPrice == info_data.CommunityProductList[i].SalePrice) {
+                            html_template_price =
+                                '<p class="pdBox_price">NTD.' + info_data.CommunityProductList[i].OriginalPrice + '</p>';
+                        } else {
+                            html_template_price =
+                                '<p class="pdBox_price">NTD.' +
+                                '<span class="pdBox_originalPrice">' + info_data.CommunityProductList[i].OriginalPrice + '</span>' +
+                                '<span class="pdBox_salePrice redTxt">' + info_data.CommunityProductList[i].SalePrice + '</span>' +
+                                '</p>';
+                        }
+
+                        var html_template_color = '<div class="pdBox_color">';
+                        for (var j = 0; j < info_data.CommunityProductList[i].ColorList.length; j++) {
+                            html_template_color = html_template_color +
+                                '<img src=' + info_data.CommunityProductList[i].ColorList[j].ColorImage.URL + ' alt="">';
+                        }
+                        html_template_color = html_template_color + '</div>';
+                        pdBox = pdBox + html_template + html_template_img + html_template_info + html_template_price + html_template_color + '</div> </div> </div>';
+                    }
+                }
+
+                pdlist = pdlist + pdBox + '</div>';
+                var html = html_header + mainImg + pdlist + html_footer;
+                $(html).insertAfter(tag);
+
+                // $('.community_submenu_mainImg > a').magnificPopup({
+                //     type: 'image',
+                //     mainClass: 'community_submenu_mainImgPop',
+                // });
+                
+                //arrow position
+                console.log($(window).width());
+                if (col == 2) {
+                    console.log(("window: " + $(window).width() / 2) + "px");
+                    $(".community_submenu_arrowPrev").addClass("community_submenu_arrow_phone");
+                    $(".community_submenu_arrowNext").addClass("community_submenu_arrow_phone");
+                    $(".community_submenu_arrowPrev.community_submenu_arrow_phone").css("top", ($(window).width() / 2) + "px");
+                    $(".community_submenu_arrowNext.community_submenu_arrow_phone").css("top", ($(window).width() / 2) + "px");
+                } else {
+                    console.log("desktop");
+                    $(".community_submenu_arrowPrev").removeClass("community_submenu_arrow_phone");
+                    $(".community_submenu_arrowNext").removeClass("community_submenu_arrow_phone");
+                }
+                
+                //esc btn
+                $(".community_submenu_esc").click(function () {
+                    $(".community_submenu").remove();
+                    $(".community_imgWrap").removeClass("active");
+                });
+
+                //prev btn
+                $(".community_submenu_arrowPrev").click(function () {
+                    var currentIndex;
+                    if (info_index == 1) {
+                        currentIndex = len;
+                    } else {
+                        currentIndex = info_index - 1;
+                    }
+                    changeSubmenu(currentIndex);
+                    console.log("click_prev");
+                });
+
+                //next btn
+                $(".community_submenu_arrowNext").click(function () {
+                    var currentIndex;
+                    if (info_index == len) {
+                        currentIndex = 1;
+                    } else {
+                        currentIndex = info_index + 1;
+                    }
+                    changeSubmenu(currentIndex);
+                    console.log("click_next");
+                });
+
+            }
+
+            function changeSubmenu(index) {
+                //clear all
+                $(".community_submenu").remove();
+                $(".community_imgWrap").removeClass("active");
+                $(".community_imgWrap:nth-child(" + index + ")").addClass("active");
+
+                //change submenu-open submenu
+                var target_index = index;
+                var target_row = Math.ceil(target_index / col);
+                // var target_img = $(".community_imgWrap:nth-child(" + target_index + ")").find("img").attr("src");
+                console.log("len:" + len + ", col: " + col + ", row: " + row + ", target_index: " + target_index + ", target_row:" + target_row);
+
+                if (target_row == row) {
+                    //為最後一行
+                    console.log("last row");
+                    var target_tag = ".community_imgWrap:nth-child(" + len + ")";
+                } else {
+                    var target_tag = ".community_imgWrap:nth-child(" + (col * target_row) + ")";
+                    console.log(target_row + ", " + target_tag);
+                }
+                // 更新submenuList
+                submenuList.ImgUrl = $(".community_imgWrap:nth-child(" + index + ")").find("img").attr("src");
+                drawSubmenu(target_tag, target_index, submenuList);
+            }
+
+        </script>
+
+</body>
+</html>

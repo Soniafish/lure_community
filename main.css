@@ -17,8 +17,8 @@ p{
   padding: 15px 0; }
   .community > nav a {
     display: inline-block;
-    padding: 0 40px;
-    font-size: 14px; }
+    padding: 0 10px;
+    font-size: 13px; }
     .community > nav a:first-child {
       border-right: solid 1px #ccc; }
 
@@ -181,6 +181,12 @@ p{
 .mfp-bg.community_submenu_mainImgPop {
   background: #fff; }
 
+@media (min-width: 768px) {
+  .community > nav a {
+    font-size: 14px;
+    padding: 0 40px;}
+}
+
 @media (min-width: 1008px) {
   .community_submenu {
     padding: 20px 40px; }
@@ -252,3 +258,6 @@ p{
     color: #fff;
     display: block;
     font-size: 12px; }
+
+
+    
